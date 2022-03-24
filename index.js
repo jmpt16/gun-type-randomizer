@@ -11,3 +11,24 @@ function stringadd(name) {
     allofit[name].splice(num,1);
   }
 }
+
+function liststringadd() {
+  switch (document.getElementById("op").value) {
+  case 'sat':
+    stringadd('styles');
+    stringadd('attributes');
+    stringadd('types');
+    break;
+  case 'tt':
+    stringadd('types');
+    stringadd('types');
+    break;
+  case 'aat':
+    stringadd('styles');
+    stringadd('attributes');
+    stringadd('types');
+    break;
+  default:
+    stringadd(document.getElementById("op").value);
+}
+}

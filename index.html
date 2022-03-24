@@ -11,10 +11,16 @@
 </head>
 
 <body>
-  <button onclick="stringadd('styles')">Style</button>
-  <button onclick="stringadd('attributes')">Attribute</button>
-  <button onclick="stringadd('types')">Type</button>
-  <br><div id="result">Result: </div>
+  <select id="op">
+    <option value="sat">Style->Attribute->Type</option>
+    <option value="tt">Type x2</option>
+    <option value="aat">Attribute x2->Type</option>
+    <option value="styles">Style</option>
+    <option value="attributes">Attribute</option>
+    <option value="types">Type</option>
+  </select>
+  <button onclick="liststringadd()">Add</button>
+  <div id="result">Result: </div>
   <a href="https://github.com/jmpt16/gun-name-randomizer">link 2 da project</a>
 </body>
 </html>

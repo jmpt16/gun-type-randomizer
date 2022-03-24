@@ -1,9 +1,8 @@
 var allofit={
   attributes:["bolt-action","break-action","lever-action","pump-action","double-barrel","bullpup","full-auto","scope-attached","mag-fed","laser","light","heavy","long-barrel","short-barrel","sawed-off","supressed","no-scope","no-stock","rusted","bored-out","rechambered","underslung"],
-  types:["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun","crossbow","flamethrower","grenade-launcher"],
+  types:["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun","crossbow","flamethrower","grenade-launcher","coilgun","railgun"],
   styles:["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic","tacticool", "blacked-out", "antique","modernized","cyberpunk"]
 };
-var backup=allofit;
 function stringadd(name) {
   console.log(allofit[name].length);
   if (allofit[name].length>0) {
@@ -31,10 +30,6 @@ function liststringadd() {
   default:
     stringadd(document.getElementById("op").value);
   }
-}
-function stringreset() {
-   allofit=backup;
-   document.getElementById("result").innerHTML="Result: ";
 }
 function stringsplit() {
    document.getElementById("result").innerHTML+="| ";

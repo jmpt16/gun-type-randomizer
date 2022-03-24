@@ -3,9 +3,7 @@ var allofit={
   types:["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun","crossbow","flamethrower","grenade-launcher"],
   styles:["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic","tacticool", "blacked-out", "antique","modernized","cyberpunk"]
 };
-
 var backup=allofit;
-
 function stringadd(name) {
   if (allofit[name].length>0) {
     var num=Math.floor(Math.random() * allofit[name].length);
@@ -13,7 +11,6 @@ function stringadd(name) {
     allofit[name].splice(num,1);
   }
 }
-
 function liststringadd() {
   switch (document.getElementById("op").value) {
   case 'sat':
@@ -34,8 +31,7 @@ function liststringadd() {
     stringadd(document.getElementById("op").value);
   }
 }
-
 function stringreset() {
    allofit=backup;
-   document.getElementById("result").innerHTML="Result: ";;
+   document.getElementById("result").innerHTML="Result: ";
 }

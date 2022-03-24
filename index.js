@@ -4,6 +4,8 @@ var allofit={
   styles:["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic","tacticool", "blacked-out", "antique","modernized"]
 };
 
+var backup=allofit;
+
 function stringadd(name) {
   if (allofit[name].length>0) {
     var num=Math.floor(Math.random() * allofit[name].length);
@@ -30,5 +32,10 @@ function liststringadd() {
     break;
   default:
     stringadd(document.getElementById("op").value);
+  }
 }
+
+function stringreset() {
+   allofit=backup;
+   document.getElementById("result").innerHTML="Result: ";;
 }

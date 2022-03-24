@@ -26,7 +26,7 @@ function liststringadd() {
     stringadd('types');
     break;
   case 'aat':
-    stringadd('styles');
+    stringadd('attributes');
     stringadd('attributes');
     stringadd('types');
     break;

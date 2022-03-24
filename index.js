@@ -36,3 +36,6 @@ function stringreset() {
    allofit=backup;
    document.getElementById("result").innerHTML="Result: ";
 }
+function stringsplit() {
+   document.getElementById("result").innerHTML+="| ";
+}

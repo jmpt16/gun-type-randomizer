@@ -1,5 +1,5 @@
 var attributes=["double-barrel","bullpup","full-auto","scope-attached","mag-fed","laser","light","heavy","long-barrel","short-barrel","sawed-off","supressed","no-scope","no-stock"];
-var types=["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun"];
+var types=["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun","crossbow"];
 var styles=["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic"];
 
 function attributeadd() {

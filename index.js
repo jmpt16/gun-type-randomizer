@@ -24,7 +24,6 @@ function liststringadd() {
     break;
   case 'aat':
     stringadd('attributes');
-    stringadd('attributes');
     stringadd('types');
     break;
   default:

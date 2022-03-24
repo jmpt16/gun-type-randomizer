@@ -23,8 +23,8 @@ function liststringadd() {
     stringadd('types');
     break;
   case 'aat':
-    stringadd('attributes');
-    stringadd('attributes');
+    document.getElementById("result").innerHTML+="a ";
+    document.getElementById("result").innerHTML+="a ";
     stringadd('types');
     break;
   default:

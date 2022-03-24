@@ -3,12 +3,20 @@ var allofit={
   types:["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun","crossbow","flamethrower","grenade-launcher","coilgun","railgun"],
   styles:["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic","tacticool", "blacked-out", "antique","modernized","cyberpunk"]
 };
+var cutter={
+  attributes:[],
+  types:[],
+  styles:[]
+};
 function stringadd(name) {
   console.log(allofit[name].length);
-  if (allofit[name].length>0) {
+  if (allofit[name].length!=cutter[name].length) {
     var num=Math.floor(Math.random() * allofit[name].length);
+    while(cutter[name].includes(allofit[name][num])){
+      num=Math.floor(Math.random() * allofit[name].length);
+    }
     document.getElementById("result").innerHTML+=allofit[name][num]+" ";
-    allofit[name].splice(num,1);
+    cutter[name].push(allofit[name][num]);
   }
 }
 function liststringadd() {
@@ -33,4 +41,12 @@ function liststringadd() {
 }
 function stringsplit() {
    document.getElementById("result").innerHTML+="| ";
+}
+function stringreset() {
+  cutter={
+    attributes:[],
+    types:[],
+    styles:[]
+  };
+  document.getElementById("result").innerHTML="Result: ";
 }

@@ -5,6 +5,7 @@ var allofit={
 };
 var backup=allofit;
 function stringadd(name) {
+  console.log(allofit[name].length);
   if (allofit[name].length>0) {
     var num=Math.floor(Math.random() * allofit[name].length);
     document.getElementById("result").innerHTML+=allofit[name][num]+" ";

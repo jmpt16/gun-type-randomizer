@@ -44,9 +44,8 @@ function liststringadd() {
     stringadd('types');
     break;
   case '5rand':
-  var names=['styles','attributes','types'];
     for (var i = 0; i < 5; i++) {
-      stringadd(names[Math.floor(Math.random() * 3)]);
+      stringadd(Object.keys(allofit)[Math.floor(Math.random() * 3)]);
     }
     break;
   default:

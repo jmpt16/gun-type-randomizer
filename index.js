@@ -44,20 +44,9 @@ function liststringadd() {
     stringadd('types');
     break;
   case '5rand':
+  var names=['styles','attributes','types'];
     for (var i = 0; i < 5; i++) {
-      var num=Math.floor(Math.random() * 3);
-      console.log(num);
-      switch (num) {
-        case 0:
-          stringadd('styles');
-          break;
-        case 1:
-          stringadd('attributes');
-          break;
-        case 2:
-          stringadd('types');
-          break;
-      }
+      stringadd(names[Math.floor(Math.random() * 3)]);
     }
     break;
   default:

@@ -1,7 +1,7 @@
 var allofit={
-  attributes:["bolt-action","break-action","lever-action","pump-action","double-barrel","bullpup","full-auto","scope-attached","mag-fed","laser","light","heavy","long-barrel","short-barrel","sawed-off","supressed","no-scope","no-stock","rusted","bored-out","rechambered","underslung"],
+  attributes:["turret","bolt-action","break-action","lever-action","pump-action","double-barrel","bullpup","full-auto","scope-attached","mag-fed","laser","light","heavy","long-barrel","short-barrel","sawed-off","supressed","no-scope","no-stock","rusted","bored-out","rechambered","underslung"],
   types:["smg","shotgun","rifle","revolver","sniper","pistol","machine-gun","minigun","crossbow","flamethrower","grenade-launcher","coilgun","railgun"],
-  styles:["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic","tacticool", "blacked-out", "antique","modernized","cyberpunk"]
+  styles:["futuristic","steampunk","retro-futuristic","low-poly","cowboy","apocalyptic","tacticool", "blacked-out", "antique","modernized","cyberpunk","gold"]
 };
 var cutter={
   attributes:[],
@@ -9,7 +9,6 @@ var cutter={
   styles:[]
 };
 function stringadd(name) {
-  console.log(allofit[name].length);
   if (allofit[name].length!=cutter[name].length) {
     var num=Math.floor(Math.random() * allofit[name].length);
     while(cutter[name].includes(allofit[name][num])){
@@ -21,6 +20,8 @@ function stringadd(name) {
 }
 function liststringadd() {
   switch (document.getElementById("op").value) {
+  case 'nope':
+    break;
   case 'sat':
     stringadd('styles');
     stringadd('attributes');
@@ -35,9 +36,34 @@ function liststringadd() {
     stringadd('attributes');
     stringadd('types');
     break;
+  case 'saatt':
+    stringadd('styles');
+    stringadd('attributes');
+    stringadd('attributes');
+    stringadd('types');
+    stringadd('types');
+    break;
+  case '5rand':
+    for (var i = 0; i < 5; i++) {
+      var num=Math.floor(Math.random() * 3);
+      console.log(num);
+      switch (num) {
+        case 0:
+          stringadd('styles');
+          break;
+        case 1:
+          stringadd('attributes');
+          break;
+        case 2:
+          stringadd('types');
+          break;
+      }
+    }
+    break;
   default:
     stringadd(document.getElementById("op").value);
   }
+  document.getElementById("op").value = "nope";
 }
 function stringsplit() {
    document.getElementById("result").innerHTML+="| ";

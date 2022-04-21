@@ -6,15 +6,17 @@
     <script src='index.js'></script>
 </head>
 <body>
-  <select id="op">
-    <option value="sat">Style->Attribute->Type</option>
-    <option value="tt">Type x2</option>
-    <option value="aat">Attribute x2->Type</option>
+  <select onchange="liststringadd()" id="op">
+    <option value="nope">-- Select to add --</option>
     <option value="styles">Style</option>
     <option value="attributes">Attribute</option>
     <option value="types">Type</option>
+    <option value="sat">Style->Attribute->Type</option>
+    <option value="tt">Type x2</option>
+    <option value="aat">Attribute x2->Type</option>
+    <option value="saatt">Style->Attribute x2->Type x2</option>
+    <option value="5rand">5-Word Randomizer</option>
   </select>
-  <button onclick="liststringadd()">Add</button>
   <button onclick="stringreset()">Reset</button>
   <button onclick="stringsplit()">Split</button>
   <div id="result">Result: </div>
